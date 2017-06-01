@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ############################################################
 #                                                          #
 #  Kleiner Skript um die benutzung der SDS011 Bibliothek   #
