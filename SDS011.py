@@ -10,7 +10,7 @@
 ############################################################
 
 """
-    Der SDS011 sendet über den TTL-UART (5V) jede Sekunde ein Datenpacket von
+    Der SDS011 sendet über den TTL-UART (3.3V) jede Sekunde ein Datenpacket von
     10Byte.
     
     vgl.  https://nettigo.pl/attachments/398

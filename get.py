@@ -33,6 +33,8 @@ def help():
 # Vergebt einem alten C++ Programmierer....
 def main():
 #{
+    
+    #überprüfe ob der benötigte Übergabeparameter mit eingegeben wurde
     if((len(sys.argv) < 2)):
     #{
         print ("Zu wenige Parameter.")
@@ -41,6 +43,7 @@ def main():
         return
     #}
     
+    #überprüfe ob um Hifle gebgen wurde
     if(sys.argv[1] == "help"):
     #{
         help()
@@ -55,7 +58,13 @@ def main():
     try:
         while True:
             print()
+            
+            # Rufe aus der sds011 Klasse ein datenpacket ab. dieser Wartet so lange
+            # bis der Sensor ein neues Datenpacket liefert.
+            # Die Rückgabe ist eine neue Instanz der Klasse sds011_data
             data = sds.get_data()
+            
+            # Hat die übertragung geklappt?
             if(data.status == 0):
             #{
                 print("PM  2.5µm {0:5.1f} µg/m^3".format(data.pm25))
